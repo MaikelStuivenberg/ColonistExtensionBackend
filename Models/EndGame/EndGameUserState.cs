@@ -5,7 +5,7 @@ namespace colonist_extension.Models.EndGame
 {
     public class EndGameUserState
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string Username { get; set; }
         public bool IsLoggedIn { get; set; }
         public bool PassedTutorial { get; set; }
