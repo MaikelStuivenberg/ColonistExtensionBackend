@@ -33,5 +33,14 @@ namespace colonist_extension.Controllers
 
             return Ok(games);
         }
+
+        [HttpGet]
+        [Route("Last")]
+        [Route("Last/{amount}")]
+        public async Task<IActionResult> GetLastSavedGames(int amount = 5){
+            var games = await _gameRepository.GetLastGames(amount);
+
+            return Ok(games);
+        }
     }
 }

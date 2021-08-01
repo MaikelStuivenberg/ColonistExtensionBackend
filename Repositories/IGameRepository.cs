@@ -10,7 +10,8 @@ namespace colonist_extension.Repositories
     {
         Task CreateGame(int evtId);
         Task AddUserToGame(int gameId, string userId);
-        Task<IEnumerable<DbEvent>> GetGamesByUsername(string username);
-        Task<IEnumerable<DbEvent>> GetGamesByUserId(string userid);
+        Task<IEnumerable<Game>> GetGamesByUsername(string username);
+        Task<IEnumerable<Game>> GetGamesByUserId(string userid);
+        Task<IEnumerable<Game>> GetLastGames(int rows);
     }
 }
